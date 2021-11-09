@@ -1,0 +1,219 @@
+
+;; Function greet (_Z5greetv, funcdef_no=1522, decl_uid=36284, cgraph_uid=436, symbol_order=438)
+
+Reordered sequence:
+ 2 bb 2 (note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(call_insn 5 2 6 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_Z10getMassagev") [flags 0x41]  <function_decl 0x7fd063797700 getMassage>) [0 getMassage S1 A8])
+            (const_int 0 [0]))) "hello.cpp":7:34 677 {*call_value}
+     (nil)
+    (nil))
+(insn 6 5 7 2 (set (reg/f:DI 82 [ _1 ])
+        (reg:DI 0 ax)) "hello.cpp":7:34 66 {*movdi_internal}
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 4 si)
+        (reg/f:DI 82 [ _1 ])) "hello.cpp":7:34 66 {*movdi_internal}
+     (nil))
+(insn 8 7 9 2 (set (reg:DI 5 di)
+        (symbol_ref:DI ("_ZSt4cout") [flags 0x40]  <var_decl 0x7fd0637985a0 cout>)) "hello.cpp":7:34 66 {*movdi_internal}
+     (nil))
+(call_insn 9 8 10 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc") [flags 0x41]  <function_decl 0x7fd063a3ee00 operator<<>) [0 operator<< S1 A8])
+            (const_int 0 [0]))) "hello.cpp":7:34 677 {*call_value}
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 10 9 11 2 (set (reg/f:DI 83 [ _2 ])
+        (reg:DI 0 ax)) "hello.cpp":7:34 66 {*movdi_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fd0636b63f0 *.LC0>)) "hello.cpp":7:34 66 {*movdi_internal}
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 5 di)
+        (reg/f:DI 83 [ _2 ])) "hello.cpp":7:34 66 {*movdi_internal}
+     (nil))
+(call_insn 13 12 16 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc") [flags 0x41]  <function_decl 0x7fd063a3ee00 operator<<>) [0 operator<< S1 A8])
+            (const_int 0 [0]))) "hello.cpp":7:34 677 {*call_value}
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+;;  succ:       3 [always]  (FALLTHRU)
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 1, flags: (NEW, RTL)
+;;  pred:       2 [always]  (FALLTHRU)
+(note 16 13 17 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 0 3 (const_int 0 [0]) "hello.cpp":8:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function main (main, funcdef_no=1523, decl_uid=36334, cgraph_uid=437, symbol_order=439)
+
+Reordered sequence:
+ 2 bb 2 (note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(call_insn 5 2 6 2 (call (mem:QI (symbol_ref:DI ("_Z5greetv") [flags 0x3]  <function_decl 0x7fd063797800 greet>) [0 greet S1 A8])
+        (const_int 0 [0])) "hello.cpp":12:10 666 {*call}
+     (nil)
+    (nil))
+(insn 6 5 9 2 (set (reg:SI 82 [ _3 ])
+        (const_int 0 [0])) "hello.cpp":13:12 67 {*movsi_internal}
+     (nil))
+(insn 9 6 13 2 (set (reg:SI 83 [ <retval> ])
+        (reg:SI 82 [ _3 ])) 67 {*movsi_internal}
+     (nil))
+(insn 13 9 14 2 (set (reg/i:SI 0 ax)
+        (reg:SI 83 [ <retval> ])) "hello.cpp":14:1 67 {*movsi_internal}
+     (nil))
+(insn 14 13 0 2 (use (reg/i:SI 0 ax)) "hello.cpp":14:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function __static_initialization_and_destruction_0 (_Z41__static_initialization_and_destruction_0ii, funcdef_no=2007, decl_uid=39927, cgraph_uid=921, symbol_order=947)
+
+Reordered sequence:
+ 2 bb 2  3 bb 3  4 bb 4  5 bb 5 Edge 2->5 redirected to 6
+Edge 3->5 redirected to 6
+(note 1 0 5 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [15 __initialize_p+0 S4 A32])
+        (reg:SI 5 di [ __initialize_p ])) "hello.cpp":14:1 67 {*movsi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [15 __priority+0 S4 A32])
+        (reg:SI 4 si [ __priority ])) "hello.cpp":14:1 67 {*movsi_internal}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [15 __initialize_p+0 S4 A32])
+            (const_int 1 [0x1]))) "hello.cpp":14:1 11 {*cmpsi_1}
+     (nil))
+(jump_insn 8 7 9 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 26)
+            (pc))) "hello.cpp":14:1 659 {*jcc}
+     (nil)
+ -> 26)
+;;  succ:       3 (FALLTHRU)
+;;              6
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       2 (FALLTHRU)
+(note 9 8 10 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 10 9 11 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [15 __priority+0 S4 A32])
+            (const_int 65535 [0xffff]))) "hello.cpp":14:1 11 {*cmpsi_1}
+     (nil))
+(jump_insn 11 10 12 3 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 26)
+            (pc))) "hello.cpp":14:1 659 {*jcc}
+     (nil)
+ -> 26)
+;;  succ:       4 (FALLTHRU)
+;;              6
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 6, flags: (NEW, REACHABLE, RTL)
+;;  pred:       3 (FALLTHRU)
+(note 12 11 13 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 13 12 14 4 (set (reg:DI 5 di)
+        (symbol_ref:DI ("_ZStL8__ioinit") [flags 0x2]  <var_decl 0x7fd063798b40 __ioinit>)) "/usr/include/c++/9/iostream":74:25 66 {*movdi_internal}
+     (nil))
+(call_insn 14 13 15 4 (call (mem:QI (symbol_ref:DI ("_ZNSt8ios_base4InitC1Ev") [flags 0x41]  <function_decl 0x7fd063ecbb00 __ct_comp >) [0 __ct_comp  S1 A8])
+        (const_int 0 [0])) "/usr/include/c++/9/iostream":74:25 666 {*call}
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 15 14 16 4 (set (reg:DI 1 dx)
+        (symbol_ref:DI ("__dso_handle") [flags 0x42]  <var_decl 0x7fd063670cf0 __dso_handle>)) "/usr/include/c++/9/iostream":74:25 66 {*movdi_internal}
+     (nil))
+(insn 16 15 17 4 (set (reg:DI 4 si)
+        (symbol_ref:DI ("_ZStL8__ioinit") [flags 0x2]  <var_decl 0x7fd063798b40 __ioinit>)) "/usr/include/c++/9/iostream":74:25 66 {*movdi_internal}
+     (nil))
+(insn 17 16 18 4 (set (reg:DI 82)
+        (mem/u/c:DI (const:DI (unspec:DI [
+                        (symbol_ref:DI ("_ZNSt8ios_base4InitD1Ev") [flags 0x41]  <function_decl 0x7fd063ecbd00 __dt_comp >)
+                    ] UNSPEC_GOTPCREL)) [25  S8 A8])) "/usr/include/c++/9/iostream":74:25 66 {*movdi_internal}
+     (nil))
+(insn 18 17 19 4 (set (reg:DI 5 di)
+        (reg:DI 82)) "/usr/include/c++/9/iostream":74:25 66 {*movdi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:DI ("_ZNSt8ios_base4InitD1Ev") [flags 0x41]  <function_decl 0x7fd063ecbd00 __dt_comp >)
+        (nil)))
+(call_insn 19 18 26 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__cxa_atexit") [flags 0x41]  <function_decl 0x7fd06368dd00 __cxa_atexit>) [0 __cxa_atexit S1 A8])
+            (const_int 0 [0]))) "/usr/include/c++/9/iostream":74:25 677 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+;;  succ:       6 (FALLTHRU)
+
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 4, next block 5, flags: (NEW, RTL)
+;;  pred:       4 (FALLTHRU)
+;;              2
+;;              3
+(code_label 26 19 24 6 6 (nil) [2 uses])
+(note 24 26 25 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 22 6 (const_int 0 [0]) "hello.cpp":14:1 -1
+     (nil))
+;;  succ:       5 [always]  (FALLTHRU)
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 6, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       6 [always]  (FALLTHRU)
+(code_label 22 25 23 5 4 (nil) [0 uses])
+(note 23 22 0 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function _GLOBAL__sub_I__Z5greetv (_GLOBAL__sub_I__Z5greetv, funcdef_no=2008, decl_uid=39933, cgraph_uid=922, symbol_order=1077)
+
+Reordered sequence:
+ 2 bb 2 (note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 4 si)
+        (const_int 65535 [0xffff])) "hello.cpp":14:1 67 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "hello.cpp":14:1 67 {*movsi_internal}
+     (nil))
+(call_insn 7 6 0 2 (call (mem:QI (symbol_ref:DI ("_Z41__static_initialization_and_destruction_0ii") [flags 0x3]  <function_decl 0x7fd06368db00 __static_initialization_and_destruction_0>) [0 __static_initialization_and_destruction_0 S1 A8])
+        (const_int 0 [0])) "hello.cpp":14:1 666 {*call}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
